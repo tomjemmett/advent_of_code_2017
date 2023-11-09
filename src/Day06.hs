@@ -1,4 +1,4 @@
-module Day06 where -- (day06) where
+module Day06 (day06) where
 
 import Common
 import Data.HashMap.Strict qualified as M
