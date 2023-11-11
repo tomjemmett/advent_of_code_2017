@@ -2,12 +2,14 @@ module Day15Spec (spec) where
 
 import SpecHelper
 
-testInput = ""
+testInput =
+  "Generator A starts with 65\n\
+  \Generator B starts with 8921"
 
 spec :: Spec
 spec = describe "Day 15" $ do
   it "Sample" $ do
-    day15 testInput `shouldBe` []
+    day15 testInput `shouldBe` ["588", "309"]
 
   it "Actual" $ do
     withFile
@@ -15,5 +17,5 @@ spec = describe "Day 15" $ do
       ReadMode
       ( \h -> do
           actualInput <- hGetContents h
-          day15 actualInput `shouldBe` []
+          day15 actualInput `shouldBe` ["573", "294"]
       )
