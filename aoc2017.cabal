@@ -81,6 +81,7 @@ library
         Day23
         Day24
         Day25
+        KnotHash
     hs-source-dirs:   src
 
 executable aoc2017
