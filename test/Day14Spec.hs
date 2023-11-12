@@ -7,7 +7,7 @@ testInput = "flqrgnkx"
 spec :: Spec
 spec = describe "Day 14" $ do
   it "Sample" $ do
-    day13 testInput `shouldBe` ["8108", "1212"]
+    day14 testInput `shouldBe` ["8108", "1242"]
 
   it "Actual" $ do
     withFile

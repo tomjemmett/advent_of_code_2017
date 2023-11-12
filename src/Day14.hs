@@ -6,7 +6,7 @@ import KnotHash (hashString)
 import Numeric (showHex)
 
 day14 :: AOCSolution
-day14 input = []
+day14 input = show <$> ([part1, part2 0] <*> pure (makeGrid input))
 
 part1 :: S.HashSet Point2d -> Int
 part1 = S.size
@@ -33,10 +33,11 @@ makeGrid i = S.fromList $ gridCoords $ map (hash i) [0 .. 127]
     gridCoords g = [(r, c) | (r, vs) <- zip [0 ..] g, (c, v) <- zip [0 ..] vs, v == '#']
 
 hash :: String -> Int -> String
-hash s i = concatMap charToGrid .
-  concatMap (`showHex` "") .
-  concatMap (untuplify2 . (`divMod` 16)) $
-  hashString (s ++ "-" ++ show i)
+hash s i =
+  concatMap charToGrid
+    . concatMap (`showHex` "")
+    . concatMap (untuplify2 . (`divMod` 16))
+    $ hashString (s ++ "-" ++ show i)
 
 charToGrid :: Char -> String
 charToGrid = \case
@@ -56,4 +57,3 @@ charToGrid = \case
   'd' -> "##.#"
   'e' -> "###."
   'f' -> "####"
-  
