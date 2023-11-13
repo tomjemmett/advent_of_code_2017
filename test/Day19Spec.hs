@@ -2,12 +2,19 @@ module Day19Spec (spec) where
 
 import SpecHelper
 
-testInput = ""
+testInput =
+  "     |          \n\
+  \     |  +--+    \n\
+  \     A  |  C    \n\
+  \ F---|----E|--+ \n\
+  \     |  |  |  D \n\
+  \     +B-+  +--+ \n\
+  \"
 
 spec :: Spec
 spec = describe "Day 19" $ do
   it "Sample" $ do
-    day19 testInput `shouldBe` []
+    day19 testInput `shouldBe` ["ABCDEF", "38"]
 
   it "Actual" $ do
     withFile
@@ -15,5 +22,5 @@ spec = describe "Day 19" $ do
       ReadMode
       ( \h -> do
           actualInput <- hGetContents h
-          day19 actualInput `shouldBe` []
+          day19 actualInput `shouldBe` ["NDWHOYRUEA", "17540"]
       )
