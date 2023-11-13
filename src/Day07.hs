@@ -1,7 +1,10 @@
+{-# OPTIONS_GHC -Wno-x-partial #-}
+
 module Day07 (day07) where
 
 import Common
-import Control.Monad.Writer (MonadWriter (tell), execWriter, zipWithM_)
+import Control.Monad (zipWithM_)
+import Control.Monad.Writer (MonadWriter (tell), execWriter)
 import Data.Bifunctor (second)
 import Data.HashMap.Strict qualified as M
 import Data.HashSet qualified as S

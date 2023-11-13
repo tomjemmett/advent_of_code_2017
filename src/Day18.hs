@@ -1,5 +1,6 @@
-module Day18 (day18) where
+{-# OPTIONS_GHC -Wno-x-partial #-}
 
+module Day18 (day18) where
 import Common
 import Data.HashMap.Strict qualified as M
 import Data.Vector qualified as V

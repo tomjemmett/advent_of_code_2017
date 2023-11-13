@@ -32,7 +32,7 @@ common shared-properties
         unordered-containers,
         utf8-string,
         vector,
-        base ^>=4.16.4
+        base ^>=4.19.0
     default-extensions:
         BangPatterns
         BlockArguments

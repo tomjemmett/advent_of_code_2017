@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-x-partial #-}
+
 -- credit to https://github.com/nicuveo/advent-of-code/blob/main/2022/haskell/lib/AOC/PathFinding.hs
 
 module PathFinding
