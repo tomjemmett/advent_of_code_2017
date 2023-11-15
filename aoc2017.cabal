@@ -27,6 +27,7 @@ common shared-properties
         hashable,
         mtl,
         parsec,
+        primes,
         pqueue,
         split,
         unordered-containers,
