@@ -30,6 +30,7 @@ common shared-properties
         primes,
         pqueue,
         split,
+        transformers,
         unordered-containers,
         utf8-string,
         vector,
